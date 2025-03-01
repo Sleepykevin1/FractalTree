@@ -11,7 +11,7 @@ void draw() {
     background(0);   
     stroke(0, 255, 0);  
     line(320, 480, 320, 380);   
-    drawBranches(320, 380, 100, -PI / 2);  // Initial trunk (angle facing up)
+    drawBranches(320, 380, 100, -PI / 2);  
 } 
 
 void drawBranches(int x, int y, float branchLength, float angle) {   
@@ -22,7 +22,7 @@ void drawBranches(int x, int y, float branchLength, float angle) {
 
     line(x, y, (int) endX, (int) endY);  
 
-    branchLength *= fractionLength;  // Reduce branch length  
+    branchLength *= fractionLength; 
 
     drawBranches((int) endX, (int) endY, branchLength, angle + branchAngle);  
     drawBranches((int) endX, (int) endY, branchLength, angle - branchAngle);  
